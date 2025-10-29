@@ -1,18 +1,20 @@
 class Aicodemetrics < Formula
   desc "Monitor and detect AI-generated code in your repositories"
   homepage "https://github.com/get-dx/ai-code-metrics"
-  url "https://github.com/get-dx/ai-code-metrics/archive/refs/tags/v0.3.6.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  version "0.3.7"
 
-  depends_on "go" => :build
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/get-dx/ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-amd64.tar.gz"
+    sha256 "b9016cbe2f60565ed0e6e9f3757cbc7ec44f0ee15d1b89ae63d1708e9b698f9d"
+  elsif OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/get-dx/ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-arm64.tar.gz"
+    sha256 "3ec09172128c98f80b18e541fbc40ad45cba870ca2e65ed1a157465233dac93e"
+  end
 
   def install
-    # Build the binary with version information
-    ldflags = "-X main.BuildTime=#{time.iso8601} -X main.GitCommit=#{version}"
-    system "go", "build", "-ldflags", ldflags, "-o", "aicodemetricsd", "./cmd/aicodemetricsd"
-
-    # Install the binary
-    bin.install "aicodemetricsd"
+    # Install the pre-built binary
+    bin.install "aicodemetricsd-darwin-amd64" => "aicodemetricsd" if Hardware::CPU.intel?
+    bin.install "aicodemetricsd-darwin-arm64" => "aicodemetricsd" if Hardware::CPU.arm?
   end
 
   service do
