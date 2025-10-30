@@ -19,6 +19,7 @@ class Aicodemetrics < Formula
 
   service do
     run [opt_bin/"aicodemetricsd"]
+    run_at_load true
     keep_alive true
     working_dir var/"aicodemetrics"
     log_path var/"log/aicodemetrics.log"
@@ -31,6 +32,19 @@ class Aicodemetrics < Formula
     (var/"aicodemetrics").mkpath
     # Create log directory
     (var/"log").mkpath
+  end
+
+  def caveats
+    <<~EOS
+      To start the AI Code Metrics daemon now and at login:
+        brew services start aicodemetrics
+
+      Or, to start it now without auto-restart on login:
+        #{opt_bin}/aicodemetricsd
+
+      Logs are located at:
+        #{var}/log/aicodemetrics.log
+    EOS
   end
 
   test do
