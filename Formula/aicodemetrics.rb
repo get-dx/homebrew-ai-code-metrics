@@ -4,10 +4,10 @@ class Aicodemetrics < Formula
   version "0.3.7"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/get-dx/ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-amd64.tar.gz"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-amd64.tar.gz"
     sha256 "b9016cbe2f60565ed0e6e9f3757cbc7ec44f0ee15d1b89ae63d1708e9b698f9d"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/get-dx/ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-arm64.tar.gz"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.7/aicodemetricsd-0.3.7-darwin-arm64.tar.gz"
     sha256 "3ec09172128c98f80b18e541fbc40ad45cba870ca2e65ed1a157465233dac93e"
   end
 
