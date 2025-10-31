@@ -1,14 +1,14 @@
 class Aicodemetrics < Formula
   desc "Monitor and detect AI-generated code in your repositories"
   homepage "https://github.com/get-dx/ai-code-metrics"
-  version "0.3.9"
+  version "0.3.10"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.9/aicodemetricsd-0.3.9-darwin-amd64.tar.gz"
-    sha256 "f41a62bde9831a84ba01ed070172ea3c61a0b482470a53e120ca25c9e22f7775"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.10/aicodemetricsd-0.3.10-darwin-amd64.tar.gz"
+    sha256 "6ccfdb9971046d0e79d3721e1bbf905c2895a047e4c483a16eba075ca64a424d"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.9/aicodemetricsd-0.3.9-darwin-arm64.tar.gz"
-    sha256 "8c1527eec8b0a9b356e72261cbc151400594b51e930f5ea98ab7475bb5d7f8b3"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.10/aicodemetricsd-0.3.10-darwin-arm64.tar.gz"
+    sha256 "5f40a43da92eb12f1f5823ef1975c4ab8ae4063d6922fe4c72565b3c902d8827"
   end
 
   def install
@@ -36,12 +36,6 @@ class Aicodemetrics < Formula
 
   def caveats
     <<~EOS
-      To start the AI Code Metrics daemon now and at login:
-        brew services start aicodemetrics
-
-      Or, to start it now without auto-restart on login:
-        #{opt_bin}/aicodemetricsd
-
       Logs are located at:
         #{var}/log/aicodemetrics.log
     EOS
