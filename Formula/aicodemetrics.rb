@@ -5,10 +5,10 @@ class Aicodemetrics < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.15/aicodemetricsd-0.3.15-darwin-amd64.tar.gz"
-    sha256 "e38b5cc0df263bc082e7613487fb1d1d699f2e2b187c0ce2b8d828c854969a6c"
+    sha256 "c0857affbc741b12f6a02bab2db79803daef478c9fa75804ce70ec8866e68a08"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.15/aicodemetricsd-0.3.15-darwin-arm64.tar.gz"
-    sha256 "80cd28fb44213aec83b0d1a578299362529b3475ee1a4c75addc1f662bccb76a"
+    sha256 "d1d4c99efe06ec44dc20edd4e758756d6e06b023e20c8ef26fcd26db169db9d4"
   end
 
   def install
