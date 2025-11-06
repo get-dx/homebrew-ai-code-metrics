@@ -1,14 +1,14 @@
 class Aicodemetrics < Formula
   desc "Monitor and detect AI-generated code in your repositories"
   homepage "https://github.com/get-dx/ai-code-metrics"
-  version "0.3.16"
+  version "0.3.17"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.16/aicodemetricsd-0.3.16-darwin-amd64.tar.gz"
-    sha256 "b2f3ddd8b6526bcfe19a4ed5923b50b36afdf2c6e91000a1e7c1617021a8f560"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.17/aicodemetricsd-0.3.17-darwin-amd64.tar.gz"
+    sha256 "2d8d69b6656bd655235026df9adbbb13754899102e443d5f6d20d78e1f7b17bc"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.16/aicodemetricsd-0.3.16-darwin-arm64.tar.gz"
-    sha256 "ea2b9da721ddf7408831749ce8eb2ef30a146929c9b6834b671f6148bf056fd4"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.17/aicodemetricsd-0.3.17-darwin-arm64.tar.gz"
+    sha256 "8ec25a0029d1f3358ec323221ec433a49ba9ebe2fb05e72938975f9c6258188a"
   end
 
   def install
