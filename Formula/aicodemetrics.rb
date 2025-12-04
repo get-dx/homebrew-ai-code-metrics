@@ -1,14 +1,14 @@
 class Aicodemetrics < Formula
   desc "Monitor and detect AI-generated code in your repositories"
   homepage "https://github.com/get-dx/ai-code-metrics"
-  version "0.3.44"
+  version "0.3.45"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.44/aicodemetricsd-0.3.44-darwin-amd64.tar.gz"
-    sha256 "448263b78c4f562029155f836b6c8f35bea8421a1a729521d509b5d4db45ec89"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.45/aicodemetricsd-0.3.45-darwin-amd64.tar.gz"
+    sha256 "c153c7dc3fdfa987a574e7b9898e7267d2622fa79ceb07d61b0258c183c08a73"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.44/aicodemetricsd-0.3.44-darwin-arm64.tar.gz"
-    sha256 "07f2bd52c75a541430fbc5e63436282da17de7d959f739e4be06f8a5d2a6a8a6"
+    url "https://github.com/get-dx/homebrew-ai-code-metrics/releases/download/v0.3.45/aicodemetricsd-0.3.45-darwin-arm64.tar.gz"
+    sha256 "7ca5d7c0c5c1dfe779fcca5ecb1a2ac743190bfd29a03d39d70cd22e2af7227f"
   end
 
   depends_on "watchman"
